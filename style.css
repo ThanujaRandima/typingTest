@@ -48,8 +48,7 @@ body{
 }
 
 .timer-div,
-.st-div,
-.input-container{
+.st-div{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.10);
 }
 
@@ -79,30 +78,49 @@ body{
 }
 
 /* input container styles */
-.input-container{
-    position:relative;
-    width: 900px;
+/* word-display{
+    width: 800px;
     height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
     margin: 2rem auto;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+} */
+
+.word-display {
+    width: 800px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    margin: 2rem auto;
+    
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    direction: ltr;
 }
 
-.word-display{
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
+/* Hide scrollbar */
+.word-display::-webkit-scrollbar {
+    display: none;
+}
+.word-display {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-#input-el{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-    background-color: transparent;
-    text-align: center;
+
+
+
+input{
     font-size: 2rem;
     font-family: inherit;
-    outline: none;
-    border: none;
 }
