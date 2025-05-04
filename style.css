@@ -49,7 +49,8 @@ body{
 
 .timer-div,
 .st-div,
-.word-display-wrap{
+.word-display-wrap,
+#input-el{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.10);
 }
 
@@ -124,10 +125,11 @@ body{
 #input-el{
     width: 100%;
     height: 100%;
-    border: none;
+    border: 2px solid rgb(255, 208, 0);
     outline: none;
-    border-bottom: 1px solid #000;
     background-color: transparent;
     text-align: center;
     color: navy;
+    border-radius: 10px;
 }
+
