@@ -145,7 +145,15 @@ body{
     top: -15px;
     left: 60px;
     animation: shake 1s ease-in-out infinite;
+    /* fade out effect */
+    transition: opacity 1500ms ease-out;
 }
+
+.fade-out{
+    opacity: 0;
+}
+
+
 
 @keyframes shake {
     0%  {transform: translate(0);}
