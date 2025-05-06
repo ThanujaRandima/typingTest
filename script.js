@@ -8,6 +8,10 @@ const accuracyEl = document.getElementById("accuracy");
 const popupEL = document.getElementById("pop-up");
 
 
+let correctWords = 0;
+let totalTypedWords = 0;
+let totalTypedChars = 0;
+
 //array containing words
 let words = [
     "apple", "Banana", "cherry", "Dog", "elephant", "Fish", "grape", "Hat", "ice", "Jungle",
@@ -41,7 +45,7 @@ function shuffle(array){
 
 let currentWordIndex = 0;
 
-
+//Displaying words
 function renderWords(){
     wordDisplay.innerHTML = ""; //clear display
     shuffle(words).forEach((word, index) => {
@@ -55,6 +59,7 @@ function renderWords(){
 
 renderWords();
 
+
 inputEl.addEventListener("keydown", function (event) {
     if (event.key === " ") {//detects space key from being entered
         event.preventDefault(); //prevent space from being entered to the input field
@@ -64,12 +69,21 @@ inputEl.addEventListener("keydown", function (event) {
 
         if (typedWord === currentWord) {
             currentSpan.style.color = "green"; //mark correct words in green
+            correctWords++;
+            totalTypedChars+= typedWord.length;
         } else {
             currentSpan.style.color = "red"; //mark incorrect words in red
         }
 
+        totalTypedWords++;
+        wordCount.textContent = correctWords;
+        charCount.textContent = totalTypedChars;
         currentWordIndex++;
         inputEl.value = "";
+
+        //checking the accuracy
+        let accuracy = Math.floor((correctWords/ totalTypedWords) * 100);
+        accuracyEl.textContent = accuracy;
 
         // Always scroll even if out of words
         if (currentWordIndex < words.length) {
@@ -82,3 +96,6 @@ inputEl.addEventListener("keydown", function (event) {
         }
     }
 });
+
+
+
