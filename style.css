@@ -6,12 +6,28 @@
     font-family: 'Poppins',sans-serif;
 }
 
+/* variables */
+:root{
+    /* colors */
+    --yellow: rgb(255,208,0);
+    --white: #fff;
+    --navy: #000080;
+    --black: #000;
+}
+
 /* general styles */
 body{
     width: 100%;
     height: 100vh;
     padding: 3rem;
     background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
 }
 
 .text,
@@ -56,7 +72,7 @@ body{
 }
 
 .timer-div{
-    border: 5px solid rgb(255, 208, 0);
+    border: 5px solid var(--yellow);
     border-radius: 50%;
     margin-right: 3rem;
 }
@@ -79,7 +95,12 @@ body{
 
 .st-div{
     border-radius: 25px;
-    background-color: #fff;
+}
+
+.st-div,
+.custom-notice-container,
+.word-display-wrap{
+    background-color: var(--white);
 }
 
 .stats-text{
@@ -127,18 +148,17 @@ body{
 #input-el{
     width: 100%;
     height: 100%;
-    border: 2px solid rgb(255, 208, 0);
+    border: 2px solid var(--yellow);
     outline: none;
-    background-color: transparent;
     text-align: center;
-    color: navy;
+    color: var(--navy);
     border-radius: 10px;
 }
 
 .notice{
     font-size: 14px;
     display: inline-block;
-    background-color: rgb(255, 208, 0);
+    background-color: var(--yellow);
     padding: 5px 10px;
     border-radius: 5px;
     position: absolute;
@@ -153,12 +173,62 @@ body{
     opacity: 0;
 }
 
-
-
 @keyframes shake {
     0%  {transform: translate(0);}
     50% {transform: translateY(5px);}
     100% {transform: translateY(0);}
 }
 
+/* custom notice styles */
+.custom-notice-container{
+    width: 600px;
+    height: 250px;
+    border: 1px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    display: none;
+}
 
+.custom-notice-container,
+.custom-text{
+    padding: 1rem;
+}
+
+.custom-notice-container,
+#custom-btn{
+    border-radius: 5px;
+}
+
+.custom-content{
+    display: flex;
+    align-items: center;
+}
+
+
+.notice-img img{
+    width: 200px;
+    height: auto;
+}
+
+.custom-header{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.custom-p{
+    font-size: 14px;
+}
+
+#custom-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(58, 58, 243);
+    color: var(--white);
+    border: none;
+}
