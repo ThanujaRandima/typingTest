@@ -18,24 +18,27 @@ let intervalId;
 
 //array containing words
 let words = [
-    "apple", "Banana", "cherry", "Dog", "elephant", "Fish", "grape", "Hat", "ice", "Jungle",
-    "kite", "Lemon", "monkey", "Nest", "orange", "Penguin", "queen", "Rain", "sun", "Tree",
-    "umbrella", "Violin", "whale", "Xylophone", "yogurt", "Zebra", "ant", "Box", "cloud", "Drum",
-    "eagle", "Fox", "garden", "Hill", "island", "Jam", "kangaroo", "Lamp", "moon", "Notebook",
-    "ocean", "Piano", "quilt", "Robot", "star", "Tiger", "uniform", "Van", "window", "Xray",
-    "yarn", "Zoo", "arch", "Ball", "circle", "Desk", "engine", "Fan", "gold", "Horse", "ink",
-    "Jacket", "key", "Leaf", "mouse", "Needle", "owl", "Paper", "quiz", "rocket", "Stone",
-    "table", "Umbrella", "vase", "wheel", "xenon", "Yolk", "zinc", "anchor", "Bread", "coin", "Doll",
-    "energy", "Flame", "glass", "Hammer", "idea", "Jet", "kettle", "Ladder", "magnet", "Net",
-    "oil", "plant", "Quest", "ring", "socks", "Tent", "unity", "Voice", "water", "Xmas",
-    "year", "zone", "alley", "Bridge", "candle", "Drawer", "Echo", "Feather", "gift", "Helmet",
-    "iron", "Jungle", "knife", "Lock", "mirror", "Nest", "oak", "Pencil", "question", "rope",
-    "Sand", "tool", "under", "Velvet", "wave", "xerox", "Yield", "zipper", "Art", "Bowl",
-    "cliff", "Dance", "egg", "Fire", "game", "Hat", "iceberg", "Joy", "king", "Line",
-    "market", "Nose", "orb", "plant", "Quote", "rose", "Shell", "tail", "Unicorn", "vulture",
-    "wish", "Yeti", "zen", "Antique", "Boat", "crayon", "Drizzle", "entry", "Fog",
-    "glue", "Hawk", "image", "Jewel", "kite", "Lime", "mirror", "night", "oak", "Puddle"
+    "apple", "banana", "cherry", "dog", "elephant", "fish", "grape", "hat", "ice", "jungle",
+    "kite", "lemon", "monkey", "nest", "orange", "penguin", "queen", "rain", "sun", "tree",
+    "umbrella", "violin", "whale", "xylophone", "yogurt", "zebra", "ant", "box", "cloud", "drum",
+    "eagle", "fox", "garden", "hill", "island", "jam", "kangaroo", "lamp", "moon", "notebook",
+    "ocean", "piano", "quilt", "robot", "star", "tiger", "uniform", "van", "window", "xray",
+    "yarn", "zoo", "arch", "ball", "circle", "desk", "engine", "fan", "gold", "horse",
+    "ink", "jacket", "key", "leaf", "mouse", "needle", "owl", "paper", "quiz", "rocket",
+    "stone", "table", "vase", "wheel", "xenon", "yolk", "zinc", "anchor", "bread", "coin",
+    "doll", "energy", "flame", "glass", "hammer", "idea", "jet", "kettle", "ladder", "magnet",
+    "net", "oil", "plant", "quest", "ring", "socks", "tent", "unity", "voice", "water",
+    "xmas", "year", "zone", "alley", "bridge", "candle", "drawer", "echo", "feather", "gift",
+    "helmet", "iron", "knife", "lock", "mirror", "oak", "pencil", "question", "rope", "sand",
+    "tool", "under", "velvet", "wave", "xerox", "yield", "zipper", "art", "bowl", "cliff",
+    "dance", "egg", "fire", "game", "iceberg", "joy", "king", "line", "market", "nose",
+    "orb", "quote", "rose", "shell", "tail", "unicorn", "vulture", "wish", "yeti", "zen",
+    "antique", "boat", "crayon", "drizzle", "entry", "fog", "glue", "hawk", "image", "jewel",
+    "lime", "night", "puddle", "radio", "scene", "track", "value", "whisper", "yummy", "zebra",
+    "bottle", "climb", "dance", "frost", "green", "hover", "index", "jungle", "kitten", "lunch",
+    "movie", "number", "open", "plant", "quiet", "road", "smile", "touch", "usual", "voice"
   ];
+  
 
 
 //function to shuffle the array
