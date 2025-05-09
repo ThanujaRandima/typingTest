@@ -93,7 +93,7 @@ function startTimer(){
             clearInterval(intervalId);
             inputEl.disabled = true;
             customNotification.classList.add("view");
-            mainContainer.classList.add("grayscale");
+            mainContainer.classList.add("grayscale");//adding grayscale effect
         }
     }, 1000);
 }
