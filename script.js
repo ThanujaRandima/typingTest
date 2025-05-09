@@ -138,7 +138,7 @@ inputEl.addEventListener("keydown", function (event) {
         accuracyEl.textContent = accuracy;
 
         //adding custom 
-        if(correctWords < 30){
+      /*   if(correctWords < 30){
             customHeader.textContent = "You're a Turtle";
             customContent.textContent = `Well... You type with the speed of ${correctWords} WPM (${totalTypedChars} CPM). Your accuracy was ${accuracy}%. Slow and steady might win the race, but it's time to pick up the pace!`
         } else if(correctWords <= 40){
@@ -150,7 +150,21 @@ inputEl.addEventListener("keydown", function (event) {
         } else{
             customHeader.textContent = "You're a Falcon";
             customContent.textContent = `Incredible! Your speed is ${correctWords} WPM (${totalTypedChars} CPM), and your accuracy is ${accuracy}%. Fast, sharp, and focused—you're flying through the keyboard skies!`
-        };
+        }; */
+        if (correctWords < 30) {
+            customHeader.textContent = "You're a Turtle";
+            customContent.innerHTML = `Well... You type with the speed of <strong>${correctWords} WPM</strong> (<strong>${totalTypedChars} CPM</strong>). Your accuracy was <strong>${accuracy}%</strong>. Slow and steady might win the race, but it's time to pick up the pace!`;
+    } else if (correctWords <= 40) {
+            customHeader.textContent = "You're a T-Rex";
+            customContent.innerHTML = `Powerful but a bit clumsy! You typed at <strong>${correctWords} WPM</strong> (<strong>${totalTypedChars} CPM</strong>), with <strong>${accuracy}%</strong> accuracy. You've got the strength—now sharpen those tiny typing arms!`;
+    } else if (correctWords <= 55) {
+            customHeader.textContent = "You're an Octopus";
+            customContent.innerHTML = `Nice work! You reached <strong>${correctWords} WPM</strong> (<strong>${totalTypedChars} CPM</strong>) with <strong>${accuracy}%</strong> accuracy. Like an octopus with 8 limbs, you're juggling keys with skill. Keep training those tentacles!`;
+    } else {
+            customHeader.textContent = "You're a Falcon";
+            customContent.innerHTML = `Incredible! Your speed is <strong>${correctWords} WPM</strong> (<strong>${totalTypedChars} CPM</strong>), and your accuracy is <strong>${accuracy}%</strong>. Fast, sharp, and focused—you're flying through the keyboard skies!`;
+}
+
 
         // Always scroll even if out of words
         if (currentWordIndex < words.length) {
