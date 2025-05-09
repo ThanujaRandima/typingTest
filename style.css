@@ -33,7 +33,7 @@ body{
 }
 
 .container.grayscale{
-    filter: blur(5px) grayscale(90%);
+    filter: blur(8px) grayscale(100%);
 }
 
 .text,
