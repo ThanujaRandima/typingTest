@@ -9,7 +9,7 @@
 /* variables */
 :root{
     /* colors */
-    --yellow: rgb(255,208,0);
+    --yellow: rgb(255, 208, 0);
     --white: #fff;
     --navy: #000080;
     --black: #000;
@@ -18,7 +18,10 @@
 
 /* general styles */
 body{
-    background-color: var(--whitesmoke);
+    /* background-color: var(--whitesmoke); */
+    background: url(images/polygon-scatter-haikei.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .container{
@@ -107,7 +110,8 @@ body{
 
 .st-div,
 .custom-notice-container,
-.word-display-wrap{
+.word-display-wrap,
+.timer-div{
     background-color: var(--white);
 }
 
