@@ -12,6 +12,7 @@ const customBtn = document.getElementById("custom-btn");
 const customHeader = document.querySelector('.custom-header');
 const customContent = document.querySelector('.custom-p');
 const mainContainer = document.querySelector('.container');
+const typeSound = document.getElementById("typeSound");
 
 //Initializing variables
 let correctWords = 0;
@@ -102,6 +103,10 @@ function startTimer(){
 
 //Input element listener
 inputEl.addEventListener("keydown", function (event) {
+    //adding key sounds
+    typeSound.currentTime = 0;//rewind to start
+    typeSound.play();
+
     if(!timerStarted){
         startTimer();
         timerStarted = true;
