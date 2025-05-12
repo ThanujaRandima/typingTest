@@ -249,3 +249,22 @@ body{
     color: var(--white);
     border: none;
 }
+
+/* media queries */
+@media (max-width: 575px) {
+    
+  .header,
+  .st-div p{
+    font-size: 2rem;
+  }
+  .st-div{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+  }
+
+  .stats-container{
+    gap: 0;
+  }
+
+}
