@@ -251,20 +251,21 @@ body{
 }
 
 /* media queries */
-@media (max-width: 575px) {
-    
-  .header,
-  .st-div p{
+@media (max-width: 575px){
+    body{
+        min-height: 100vh;
+    }
+   .header{
     font-size: 2rem;
-  }
-  .st-div{
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-  }
-
-  .stats-container{
-    gap: 0;
-  }
-
+   }
+   /* stats div */
+   .stat-div p{
+    font-size: 1.5rem;
+   }
+   .stat-div{
+    width: 50px;
+   }
+   .timer-div{
+    margin: 0;
+   }
 }
