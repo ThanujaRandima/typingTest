@@ -251,21 +251,18 @@ body{
 }
 
 /* media queries */
-@media (max-width: 575px){
+@media (max-width: 575px) {
     body{
-        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
     }
+
+   .container{
+    align-items: center;
+    justify-content: flex-start;
+   }
+
    .header{
     font-size: 2rem;
-   }
-   /* stats div */
-   .stat-div p{
-    font-size: 1.5rem;
-   }
-   .stat-div{
-    width: 50px;
-   }
-   .timer-div{
-    margin: 0;
    }
 }
