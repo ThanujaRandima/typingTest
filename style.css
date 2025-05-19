@@ -250,6 +250,18 @@ body{
     border: none;
 }
 
+
+
+/* force a white background in all modes */
+@media (prefers-color-scheme: dark){
+    .st-div,
+    .custom-notice-container,
+    .word-display-wrap,
+    .timer-div{
+        background-color: var(--white);
+    }
+}
+
 /* media queries */
 @media (max-width: 575px) {
     body{
